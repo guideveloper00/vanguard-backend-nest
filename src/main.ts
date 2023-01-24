@@ -15,6 +15,7 @@ async function bootstrap() {
   app.use(
     cookieSession({
       keys: [key],
+      maxAge: 24 * 60 * 60 * 1000,
     }),
   );
   app.useGlobalPipes(
